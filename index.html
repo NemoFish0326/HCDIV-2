@@ -8,7 +8,7 @@
         /* 全局背景样式 */
         body {
             font-family: Arial, sans-serif;
-            background: url('https://i.imgur.com/tqI6KHs.jpeg') no-repeat center center fixed; /* 替换为你的背景图片链接 */
+            background: url('https://i.imgur.com/tqI6KHs.jpeg') no-repeat center center fixed;
             background-size: cover;
             color: #333;
             margin: 0;
@@ -19,53 +19,153 @@
             min-height: 100vh;
             flex-direction: column;
         }
+
         /* 标题样式 */
         h1 {
-            color: #8B0000; /* 暗红色 */
-            font-size: 3em; /* 增大字体大小 */
+            color: #8B0000;
+            font-size: 3em;
             margin-bottom: 0.5em;
             text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
         }
-        /* 文本和链接样式 */
-        p {
-            font-size: 1.2em;
-            margin: 0.5em 0;
-            text-align: center;
-        }
-        a {
-            color: #8B0000; /* 与标题一致的暗红色 */
-            text-decoration: none;
-            font-weight: bold;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        /* PPTX iframe 容器样式 */
-        .pptx-container {
+
+        /* 轮播容器样式 */
+        .slideshow-container {
             width: 80%;
             max-width: 1000px;
             height: 600px;
+            position: relative;
             margin-top: 20px;
             border: 2px solid #ddd;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        /* 幻灯片图片样式 */
+        .slides {
+            display: none;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* 导航按钮样式 */
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: auto;
+            padding: 16px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+        }
+
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        /* 当前幻灯片指示点样式 */
+        .dot-container {
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        .dot {
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+        .active, .dot:hover {
+            background-color: #717171;
         }
     </style>
 </head>
 <body>
     <h1>Data Visualization Critique</h1>
 
-    <!-- PPTX 嵌入区域 -->
-    <div class="pptx-container">
-        <iframe src="<div style="position: relative; width: 100%; height: 0; padding-top: 56.2500%;
- padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
- border-radius: 8px; will-change: transform;">
-  <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
-    src="https://www.canva.com/design/DAGWSA0SJ88/NPBqacnKBv7MbKFTBcJg3Q/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
-  </iframe>
-</div>
-<a href="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAGWSA0SJ88&#x2F;NPBqacnKBv7MbKFTBcJg3Q&#x2F;view?utm_content=DAGWSA0SJ88&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link" target="_blank" rel="noopener">DataVisualization Critique</a>，作者 Nemo fish" width="100%" height="100%" frameborder="0" allowfullscreen></iframe>
+    <!-- 轮播容器 -->
+    <div class="slideshow-container">
+        <div class="slides">
+            <img src="https://i.imgur.com/SZghBes.jpeg" style="width:100%">
+        </div>
+        <div class="slides">
+            <img src="https://i.imgur.com/Z52x8hs.jpeg" style="width:100%">
+        </div>
+        <div class="slides">
+            <img src="https://i.imgur.com/eUlXCm1.jpeg" style="width:100%">
+        </div>
+        <div class="slides">
+            <img src="https://i.imgur.com/fKep3IC.jpeg" style="width:100%">
+        </div>
+        <div class="slides">
+            <img src="https://i.imgur.com/yk1ymuP.jpeg" style="width:100%">
+        </div>
+        <div class="slides">
+            <img src="https://i.imgur.com/k7c3m0U.jpeg" style="width:100%">
+        </div>
+        <div class="slides">
+            <img src="https://i.imgur.com/4sWOUUH.jpeg" style="width:100%">
+        </div>
+        <div class="slides">
+            <img src="https://i.imgur.com/YFNIoiM.jpeg" style="width:100%">
+        </div>
+        <div class="slides">
+            <img src="https://i.imgur.com/gT8XiXB.jpeg" style="width:100%">
+        </div>
+        <div class="slides">
+            <img src="https://i.imgur.com/Mc77Yf1.jpeg" style="width:100%">
+        </div>
+        <!-- 更多幻灯片 -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
     </div>
 
-    <p><a href="https://docs.google.com/presentation/d/1Ev3hHbM8_jesbh6bnkcnReetfwIRoVVk/edit?usp=drive_link&ouid=101627108767828261111&rtpof=true&sd=true" target="_blank">Click here to download the pptx file</a></p>
+    <!-- 幻灯片指示点 -->
+    <div class="dot-container">
+        <span class="dot" onclick="currentSlide(1)"></span> 
+        <span class="dot" onclick="currentSlide(2)"></span> 
+        <span class="dot" onclick="currentSlide(3)"></span> 
+        <!-- 更多指示点 -->
+    </div>
+
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("slides");
+            let dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {slideIndex = 1}    
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";  
+            dots[slideIndex-1].className += " active";
+        }
+    </script>
+
 </body>
 </html>
