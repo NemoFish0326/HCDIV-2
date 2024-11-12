@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Visualization Critique</title>
+    <style>
+        /* 全局背景样式 */
+        body {
+            font-family: Arial, sans-serif;
+            background: url('https://i.imgur.com/tqI6KHs.jpeg') no-repeat center center fixed; /* 替换为你的背景图片链接 */
+            background-size: cover;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            flex-direction: column;
+        }
+        /* 标题样式 */
+        h1 {
+            color: #8B0000; /* 暗红色 */
+            font-size: 3em; /* 增大字体大小 */
+            margin-bottom: 0.5em;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+        }
+        /* 文本和链接样式 */
+        p {
+            font-size: 1.2em;
+            margin: 0.5em 0;
+            text-align: center;
+        }
+        a {
+            color: #8B0000; /* 与标题一致的暗红色 */
+            text-decoration: none;
+            font-weight: bold;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        /* PPTX iframe 容器样式 */
+        .pptx-container {
+            width: 80%;
+            max-width: 1000px;
+            height: 600px;
+            margin-top: 20px;
+            border: 2px solid #ddd;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <h1>Data Visualization Critique</h1>
+
+    <!-- PPTX 嵌入区域 -->
+    <div class="pptx-container">
+        <iframe src="https://sutdapac-my.sharepoint.com/personal/keyu_wang_mymail_sutd_edu_sg/_layouts/15/embed.aspx?UniqueId=2888e949-fde0-4d11-b0e9-ddf3d7bddf6b" width="100%" height="100%" frameborder="0" allowfullscreen></iframe>
+    </div>
+
+    <p><a href="https://docs.google.com/presentation/d/1Ev3hHbM8_jesbh6bnkcnReetfwIRoVVk/edit?usp=drive_link&ouid=101627108767828261111&rtpof=true&sd=true" target="_blank">Click here to download the pptx file</a></p>
+</body>
+</html>
